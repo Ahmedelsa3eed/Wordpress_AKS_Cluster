@@ -9,16 +9,24 @@ You need to have a Kubernetes cluster, and the kubectl command-line tool must be
   ```bash
   aws eks --region <region> update-kubeconfig --name <cluster_name>
   ```
-- Amazon EBS CSI Driver
+- Install Amazon EBS CSI Driver
+- Install Metrics Server
+  ```bash
+  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+  ```
+- Add the certficate and key to secrets:
+  ```bash
+  kubectl create secret tls wordpress-tls --key cert/key.pem --cert cert/cert.pem
+  ```
 
 ## Usage
 - Apply the kustomization directory by
   ```bash
   kubectl apply -k ./
   ```
-- Run the following command to get the IP Address for the WordPress Service:
+- Run the following command to verify that the Ingress resource has been created:
   ```bash
-  kubectl get svc wordpress
+  kubectl get ing
   ```
 - Run the following command to delete your Secret, Deployments, Services and PersistentVolumeClaims:
   ```bash
