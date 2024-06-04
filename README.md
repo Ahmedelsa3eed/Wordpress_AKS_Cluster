@@ -1,9 +1,15 @@
 # Wordpress EKS Cluster
-deploy a WordPress site and a MySQL database using AWS EKS. Both applications use PersistentVolumes and PersistentVolumeClaims to store data.
+Deploy a WordPress site and a MySQL database using AWS EKS. Both applications use PersistentVolumes and PersistentVolumeClaims to store data.
 
-## Prerequisites
+## Before you begin
+You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.
 - AWS CLI
 - kubectl
+- You will need to run the following command to configure kubeconfig:
+  ```bash
+  aws eks --region <region> update-kubeconfig --name <cluster_name>
+  ```
+- Amazon EBS CSI Driver
 
 ## Usage
 - Apply the kustomization directory by

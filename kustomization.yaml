@@ -10,3 +10,5 @@ resources:
   - wordpress/service.yaml
   - wordpress/pvc.yaml
   - wordpress/deployment.yaml
+  - wordpress/hpa.yaml
+  - wordpress/ingress.yaml

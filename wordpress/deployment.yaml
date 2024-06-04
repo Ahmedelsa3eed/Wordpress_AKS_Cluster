@@ -20,6 +20,10 @@ spec:
       containers:
       - image: wordpress:6.2.1-apache
         name: wordpress
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         env:
         - name: WORDPRESS_DB_HOST
           value: wordpress-mysql
@@ -36,6 +40,18 @@ spec:
         volumeMounts:
         - name: wordpress-persistent-storage
           mountPath: /var/www/html
+        livenessProbe:
+          httpGet:
+            path: /wp-login.php
+            port: 80
+          initialDelaySeconds: 90
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /wp-login.php
+            port: 80
+          initialDelaySeconds: 60
+          periodSeconds: 10
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
