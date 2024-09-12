@@ -1,4 +1,3 @@
 resources:
-  - ../base/wordpress
-  - ../base/mysql
+  - ../base/
   - storageclass-azure.yaml
