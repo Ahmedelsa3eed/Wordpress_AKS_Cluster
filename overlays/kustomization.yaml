@@ -1,0 +1,14 @@
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=Saeed@19015357
+resources:
+  - storageclass-azure.yaml
+  - ../mysql/service.yaml
+  - ../mysql/pvc.yaml
+  - ../mysql/deployment.yaml
+  - ../wordpress/service.yaml
+  - ../wordpress/pvc.yaml
+  - ../wordpress/deployment.yaml
+  - ../wordpress/hpa.yaml
+  - ../wordpress/ingress.yaml
