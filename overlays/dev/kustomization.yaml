@@ -1,5 +1,5 @@
 resources:
-- ../base/
+- ../../base/
 - ingress.yaml
 
 commonLabels:
