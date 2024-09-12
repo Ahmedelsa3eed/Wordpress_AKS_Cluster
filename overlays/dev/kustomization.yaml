@@ -1,0 +1,16 @@
+resources:
+- ../base/
+
+namespace: dev
+
+commonLabels:
+  app: dev-app
+
+namePrefix:
+  dev-
+
+secretGenerator:
+  - name: mysql-pass
+    type: Opaque
+    literals:
+      - password=U2FlZWRAMTkwMTUzNTc=
