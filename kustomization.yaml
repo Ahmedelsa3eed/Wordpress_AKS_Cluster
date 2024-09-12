@@ -3,7 +3,7 @@ secretGenerator:
   literals:
   - password=Saeed@19015357
 resources:
-  - storageclass.yaml
+  - storageclass-azure.yaml
   - mysql/service.yaml
   - mysql/pvc.yaml
   - mysql/deployment.yaml
