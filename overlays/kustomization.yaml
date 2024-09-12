@@ -4,5 +4,4 @@ secretGenerator:
   - password=Saeed@19015357
 resources:
   - storageclass-azure.yaml
-  - ../mysql/
-  - ../wordpress/
+  - ../base/
