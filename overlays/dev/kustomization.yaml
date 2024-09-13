@@ -39,7 +39,7 @@ patches:
   target:
     kind: HorizontalPodAutoscaler
     name: wordpress-hpa
-    version: v1
+    version: v2
 
 - path: patches/mysql-deployment.yml
   target:
