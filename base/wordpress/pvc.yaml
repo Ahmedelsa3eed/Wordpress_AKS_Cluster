@@ -7,7 +7,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: aws-ebs-sc
+  storageClassName: azuredisk-csi-waitforfirstconsumer
   resources:
     requests:
-      storage: 2Gi
+      storage: 5Gi
