@@ -1,4 +1,5 @@
 resources:
+- namespace.yml
 - ../../base/
 - ingress.yaml
 
@@ -7,6 +8,53 @@ commonLabels:
 
 secretGenerator:
   - name: mysql-pass
+    namespace: dev
     type: Opaque
     literals:
       - password=Saeed@19015357
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+patches:
+- path: patches/app-deployment.yml
+  target:
+    group: apps
+    kind: Deployment
+    name: wordpress
+    version: v1
+
+- path: patches/app-service.yml
+  target:
+    kind: Service
+    name: wordpress
+    version: v1
+
+- path: patches/pvc.yml
+  target:
+    kind: PersistentVolumeClaim
+    name: wp-pv-claim
+    version: v1
+
+- path: patches/hpa.yml
+  target:
+    kind: HorizontalPodAutoscaler
+    name: wordpress-hpa
+    version: v1
+
+- path: patches/mysql-deployment.yml
+  target:
+    kind: Deployment
+    name: wordpress-mysql
+    version: v1
+
+- path: patches/mysql-service.yml
+  target:
+    kind: Service
+    name: wordpress-mysql
+    version: v1
+
+- path: patches/mysql-pvc.yml
+  target:
+    kind: PersistentVolumeClaim
+    name: mysql-pv-claim
+    version: v1

@@ -1,6 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  namespace: dev
   name: wordpress-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
@@ -10,7 +11,7 @@ spec:
   tls:
   - hosts:
     - saeed-wordpress.cloud-stacks.com
-    secretName: wordpress-tls
+    secretName: argocd-server-tls
   rules:
   - host: saeed-wordpress.cloud-stacks.com
     http:

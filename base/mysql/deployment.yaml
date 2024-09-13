@@ -46,11 +46,13 @@ spec:
             port: 3306
           initialDelaySeconds: 15
           periodSeconds: 10
+          timeoutSeconds: 10
         livenessProbe:
           tcpSocket:
             port: 3306
           initialDelaySeconds: 60
           periodSeconds: 10
+          timeoutSeconds: 10
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:

@@ -46,12 +46,14 @@ spec:
             port: 80
           initialDelaySeconds: 90
           periodSeconds: 10
+          timeoutSeconds: 10
         readinessProbe:
           httpGet:
             path: /wp-login.php
             port: 80
           initialDelaySeconds: 60
           periodSeconds: 10
+          timeoutSeconds: 10
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
