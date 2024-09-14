@@ -4,4 +4,4 @@
 
 - op: replace 
   path: /spec/template/spec/containers/0/image
-  value: ahmedelsaeed/saeed-wordpress:ec145b4
+  value: ahmedelsaeed/saeed-wordpress:decd0ed
