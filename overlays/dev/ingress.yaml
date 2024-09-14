@@ -11,7 +11,7 @@ spec:
   tls:
   - hosts:
     - saeed-wordpress.cloud-stacks.com
-    secretName: argocd-server-tls
+    secretName: tls-secret
   rules:
   - host: saeed-wordpress.cloud-stacks.com
     http:
