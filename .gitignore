@@ -1,1 +1,3 @@
 cert
+argocd/tls-secret.yml
+overlays/dev/tls-secret.yml
