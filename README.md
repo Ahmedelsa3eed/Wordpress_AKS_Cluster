@@ -1,7 +1,7 @@
 # WordPress on AKS Cluster
 ![arch](./Wordpress_AKS_Cluster.svg)
 
-A project demonstrating how to deploy a WordPress site on an Azure Kubernetes Service (AKS) cluster using Kubernetes manifests, Helm, and persistent storage. This project showcases best practices for cloud-native application deployment.
+A project demonstrating how to deploy a WordPress site on an Azure Kubernetes Service (AKS) cluster using Kubernetes manifests, Kustomize, and persistent storage. This project showcases best practices for cloud-native application deployment.
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -20,7 +20,7 @@ This project automates the deployment of a WordPress website on Azure Kubernetes
 
 Persistent storage for WordPress data.
 Configurable scalability using Kubernetes.
-Customizable environment through Helm values.
+Customizable environment through Kustomize.
 
 
 ## Tech Stack
