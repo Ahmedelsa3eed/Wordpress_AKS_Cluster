@@ -164,4 +164,4 @@ Contributions are welcome! To contribute:
 If you encounter any problems, please [create an issue](https://github.com/Ahmedelsa3eed/Wordpress_AKS_Cluster/issues).
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/Ahmedelsa3eed/Wordpress_AKS_Cluster/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Ahmedelsa3eed/Wordpress_AKS_Cluster/blob/main/LICENSE) file for details.
